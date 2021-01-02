@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    text-align: center;
+    padding:20px 0;
+
+}
+.header select{
+    font-size: 1rem;
+}
+.header h1{
+    margin: 0 0 20px 0;
+}
+.slideshow {
+    height: 500px;
+    width: 1200px;
+    background-color:#333;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transform: scale(1);
+    transition: all .9s ease-out;
+}
+
+/* element that is the second child of its parent, counting from the last child */
+.slide:nth-last-child(2){
+    opacity: 1;
+    /* for zoom in */
+    transform: scale(1.08); 
+}
